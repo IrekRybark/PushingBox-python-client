@@ -1,3 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+""" PushingBox API wrapper """
+
+
 import urllib.request
 import urllib.parse
 
