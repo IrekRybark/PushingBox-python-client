@@ -24,8 +24,8 @@ class PushingBox():
         """
         Sends a push request
         :param kwargs: additional API call parameters
-        :return: True, if success
-                 False, "Exception message", if exception occurred
+        :return: empty string if success
+                 "Exception message", if exception occurred
         """
         try:
             self.values.update(kwargs)
@@ -33,9 +33,9 @@ class PushingBox():
             req = urllib.request.Request(self.url, data)
             response = urllib.request.urlopen(req)
             # print(response.read().decode('utf-8'))
-            return True, ""
+            return ""
         except Exception as inst:
-            return False, inst
+            return inst
 
 
 
